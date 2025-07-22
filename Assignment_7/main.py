@@ -4,8 +4,5 @@ children = [
     {"name": "Charlie", "age": 3, "height": 110},
     {"name": "David", "age": 5, "height": 102},
     {"name": "Eve", "age": 6, "height": 99}]
-eligible_children = []
-for child in children:
-    if(child["age"] > 3 and child["height"] > 100):
-        eligible_children.append(child)
-print("Eligible children for the fun park: ",eligible_children)
+eligible_children = [child for child in children if (child["age"] > 3 and child["height"] > 100)]
+print("Eligible children for the fun park: ", eligible_children)
